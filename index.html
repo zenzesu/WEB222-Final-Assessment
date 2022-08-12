@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <nav class="main-nav">
+      <div class="title">
+        <h1>S</h1>
+        <h1 class="title-2">G</h1>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="main-nav-mobile">
+      <div class="title">
+        <h1>S</h1>
+        <h1 class="title-2">G</h1>
+      </div>
+
+      <div class="menu">
+        <div id="menu-ic" onclick="openMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+
+          <ul class="menu2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main-content">
+      <div class="top-text">
+        <h1 class="h1">Hey</h1>
+        <h1 class="h1">I'm Subin Gurung,</h1>
+        <h1 class="h1">a Web Developer</h1>
+
+        <div class="btn">
+          <p class="btn-resume">
+            <i class="fa-solid fa-download"></i>
+            <a href="assets/Subin Gurung Resume.pdf">Resume</a>
+          </p>
+
+          <p class="btn-contact">
+            <a href="#contact">Contact Me</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="top-image">
+        <img id="subin" src="assets/subin.jpeg" alt="" />
+      </div>
+    </section>
+
+    <section id="about-me" class="about-me">
+      <h1 class="h1">About Me</h1>
+      <div class="my-details">
+        <div class="me">
+          <h1>About Me and Acedemic Honesty</h1>
+          <p class="p">
+            I declare that my assessment is wholly my own work in accordance
+            with Seneca Academic Policy. No part of this assessment has been
+            copied manually or electronically from any other source (including
+            web sites) except for the information supplied by the WEB222
+            instructors and / or made available in this assessment for my use. I
+            also declare that no part of this assignment has been distributed to
+            other students.
+          </p>
+
+          <p class="date">
+            <b>Date:</b
+            ><span class="date-value">
+              <script>
+                document.write(new Date().toLocaleDateString());
+              </script>
+            </span>
+          </p>
+        </div>
+
+        <div class="basic-info">
+          <h1>Basic Information</h1>
+          <div class="info">
+            <div class="labels">
+              <p class="p"><b>Age:</b></p>
+              <p class="p"><b>Email:</b></p>
+              <p class="p"><b>Language:</b></p>
+              <p class="p"><b>Class Section: </b></p>
+              <p class="p"><b>Student Id:</b></p>
+              <p class="p"><b>Instructor: </b></p>
+            </div>
+
+            <div class="label-values">
+              <p class="info-value">21</p>
+              <p class="info-value1">sgurung24@myseneca.ca</p>
+              <p class="info-value2">
+                English,Hindi,Nepali,A little bit of Japanese
+              </p>
+              <p class="info-value3">web222 zbb</p>
+              <p class="info-value4">126819218</p>
+              <p class="info-value5">Noman Atique</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="education" class="h1 edu-title">Education</h1>
+
+      <div class="education">
+        <div class="edu-details">
+          <h6>2022-2023(expected)</h6>
+          <h2>Diploma</h2>
+        </div>
+
+        <div class="edu-more-details">
+          <h3>Diploma</h3>
+          <h6 class="first">SENECA COLLEGE</h6>
+        </div>
+      </div>
+
+      <div id="edu-card-2" class="education">
+        <div class="edu-details">
+          <h6>2019</h6>
+          <h2>Higher Secondary</h2>
+        </div>
+
+        <div class="edu-more-details">
+          <h3>Secondary</h3>
+          <h6 class="first">Arniko International College</h6>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h1 class="h1 contact-title">Contact me</h1>
+      <form
+        name="contactForm"
+        method="post"
+        action="https://httpbin.org/post"
+        onsubmit="return formValidate()"
+      >
+        <ul class="form-ul">
+          <input id="name" type="text" name="cname" placeholder="Name" />
+          <input id="email" type="email" name="cemail" placeholder="Email" />
+          <input type="text" name="caddress" placeholder="Address" />
+          <input
+            id="city"
+            list="canadacity"
+            type="text"
+            name="ccity"
+            placeholder="City"
+          />
+
+          <datalist id="canadacity">
+            <option value="Toronto"></option>
+            <option value="Montreal"></option>
+            <option value="Calgary"></option>
+            <option value="Vancouver"></option>
+            <option value="Ottawa"></option>
+            <option value="Edmonton"></option>
+            <option value="Mississauga"></option>
+            <option value="Winnipeg"></option>
+          </datalist>
+
+          <input
+            id="postcode"
+            type="text"
+            name="cpostalcode"
+            placeholder="Postal Code"
+          />
+          <select id="state" name="cstate" id="cstate">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NU">Nunavut</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NB">New Brunswick</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon</option>
+          </select>
+
+          <fieldset class="about">
+            <legend>what this is about?</legend>
+            <label>
+              <input
+                id="question"
+                type="radio"
+                name="about"
+                value="Questions"
+                onclick="return showRate(1)"
+              />
+              Questions
+            </label>
+            <label>
+              <input
+                id="comment"
+                type="radio"
+                name="about"
+                value="Comments"
+                onclick="return showRate(1)"
+              />
+              Comments
+            </label>
+            <label>
+              <input
+                id="hiring"
+                type="radio"
+                name="about"
+                value="Hiring"
+                onclick="return showRate(0)"
+              />
+              Hiring
+            </label>
+          </fieldset>
+
+          <div id="rate" class="rate">
+            <input
+              id="hrate"
+              type="text"
+              name="hourlyrate"
+              placeholder="Hourly Rate"
+            />
+          </div>
+
+          <textarea name="cmessage" placeholder="Message" rows="5"></textarea>
+          <input type="submit" value="Submit" />
+        </ul>
+      </form>
+    </section>
+  </body>
+</html>
